@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aether Café | Thessaloniki</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(11, 11, 11, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d4af37;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.8)),
+        radial-gradient(circle at center, #3b2d0b, #080808 65%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 9vw, 100px);
+      color: #d4af37;
+      margin-bottom: 15px;
+      letter-spacing: -3px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #d4af37;
+      color: #111;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #f0cf63;
+    }
+
+    section {
+      padding: 100px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 50px;
+      color: #d4af37;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #ccc;
+      font-size: 18px;
+    }
+
+    .menu-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      padding: 30px;
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 15px;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #d4af37;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aaa;
+    }
+
+    .price {
+      display: block;
+      margin-top: 15px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111;
+    }
+
+    .contact p {
+      color: #bbb;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #050505;
+      color: #777;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 15px 20px;
+      }
+
+      nav div:last-child {
+        display: none;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">AETHER</div>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>AETHER</h1>
+
+      <p>
+        Specialty coffee, brunch & cocktails in the heart of Thessaloniki.
+      </p>
+
+      <a href="#menu" class="btn">Explore Our Menu</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Aether</h2>
+
+    <div class="about">
+      <p>
+        Aether Café is a modern coffee destination in Thessaloniki,
+        created for people who appreciate exceptional coffee, relaxed
+        mornings and unforgettable evenings.
+      </p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2 class="section-title">Our Menu</h2>
+
+    <div class="menu-grid">
+
+      <div class="card">
+        <h3>Specialty Coffee</h3>
+        <p>Premium freshly roasted coffee.</p>
+        <span class="price">From €3.00</span>
+      </div>
+
+      <div class="card">
+        <h3>Brunch</h3>
+        <p>Fresh breakfast and brunch creations.</p>
+        <span class="price">From €7.50</span>
+      </div>
+
+      <div class="card">
+        <h3>Desserts</h3>
+        <p>Handcrafted sweet treats.</p>
+        <span class="price">From €4.50</span>
+      </div>
+
+      <div class="card">
+        <h3>Cocktails</h3>
+        <p>Creative cocktails for your evenings.</p>
+        <span class="price">From €8.00</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Visit Us</h2>
+
+    <p>📍 Thessaloniki, Greece</p>
+    <p>📞 +30 210 000 0000</p>
+    <p>✉️ hello@aethercafe.example</p>
+
+    <br>
+
+    <a href="mailto:hello@aethercafe.example" class="btn">
+      Contact Us
+    </a>
+  </section>
+
+  <footer>
+    © 2026 Aether Café — Thessaloniki
+  </footer>
+
+</body>
+</html>
